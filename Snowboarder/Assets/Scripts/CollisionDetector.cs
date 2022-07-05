@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionDetector : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class CollisionDetector : MonoBehaviour
     {
         if(other.tag == "Ground")
         {
-            Debug.Log("You broke your neck");
+            SceneManager.LoadScene(0);
         }
     }
 }
